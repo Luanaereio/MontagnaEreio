@@ -265,3 +265,65 @@ p { margin: 0; }
   .whats-fixo svg { width: 26px; height: 26px; }
   .faixa-dentro { gap: 10px 20px; font-size: 12.5px; }
 }
+
+/* ---------- conteudo extra (21/10): compromissos, para quem, depoimentos, quem somos, tabelas, glossario ---------- */
+.compromissos { background: var(--navy); color: #fff; }
+.compromissos-dentro { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 34px 0; }
+.compromisso { display: flex; flex-direction: column; gap: 6px; padding: 4px 22px; border-left: 1px solid rgba(255, 255, 255, 0.16); }
+.compromisso b { font-family: var(--titulo); font-size: 34px; font-weight: 800; letter-spacing: -0.03em; color: #fff; line-height: 1; }
+.compromisso span { font-size: 14px; color: rgba(255, 255, 255, 0.72); }
+
+.depoimentos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.depoimento { background: #fff; border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.estrelas { display: flex; gap: 3px; color: #F5B301; }
+.estrelas svg { width: 18px; height: 18px; }
+.depoimento p { color: var(--texto); font-size: 15.5px; line-height: 1.65; flex: 1; }
+.depoimento footer { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 14px; color: #fff; background: linear-gradient(135deg, var(--azul), var(--verde)); flex: none; }
+.depoimento b { display: block; font-size: 14.5px; color: var(--navy); }
+.depoimento small { color: var(--texto-3); font-size: 13px; }
+.nota-pe { margin-top: 18px; text-align: center; font-size: 12.5px; color: var(--texto-3); }
+
+.sobre { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.sobre .cabeca { margin-bottom: 0; }
+.sobre .cabeca p + p { margin-top: 14px; }
+.sobre-caixa { background: #fff; border: 1.5px solid var(--linha); border-radius: 22px; padding: 34px; box-shadow: var(--sombra-p); }
+.sobre-caixa h3 { font-size: 20px; color: var(--navy); margin-bottom: 18px; }
+.sobre-caixa ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.sobre-caixa li { display: flex; gap: 12px; color: var(--texto-2); font-size: 15px; }
+.sobre-caixa li svg { width: 22px; height: 22px; color: var(--verde); flex: none; }
+
+.glossario { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.termo { background: #fff; border: 1.5px solid var(--linha); border-radius: var(--raio-p); padding: 20px 22px; }
+.termo b { display: block; font-family: var(--titulo); font-size: 16px; color: var(--navy); margin-bottom: 6px; }
+.termo p { font-size: 14.5px; color: var(--texto-2); }
+
+.tabela-caixa { overflow-x: auto; border: 1.5px solid var(--linha); border-radius: var(--raio); background: #fff; }
+.tabela { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 15px; }
+.tabela th, .tabela td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+.tabela th { background: var(--neve); font-family: var(--titulo); font-size: 14px; color: var(--navy); }
+.tabela tr:last-child td { border-bottom: 0; }
+.tabela td:first-child { font-weight: 700; color: var(--navy); }
+.tabela td { color: var(--texto-2); }
+
+.passos.quatro { grid-template-columns: repeat(4, 1fr); }
+.docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.doc { background: #fff; border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 26px; }
+.doc h3 { font-size: 17px; color: var(--navy); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.doc h3 svg { width: 20px; height: 20px; color: var(--azul); flex: none; }
+.doc ul { margin: 0; padding-left: 18px; color: var(--texto-2); font-size: 14.5px; }
+.doc li + li { margin-top: 6px; }
+
+@media (max-width: 1000px) {
+  .compromissos-dentro { grid-template-columns: 1fr 1fr; }
+  .depoimentos, .glossario, .docs, .passos.quatro { grid-template-columns: 1fr 1fr; }
+  .sobre { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 760px) {
+  .compromissos-dentro { grid-template-columns: 1fr 1fr; gap: 18px; padding: 26px 0; }
+  .compromisso { padding: 2px 14px; }
+  .compromisso b { font-size: 26px; }
+  .depoimentos, .glossario, .docs, .passos.quatro { grid-template-columns: 1fr; gap: 14px; }
+  .sobre-caixa { padding: 24px 20px; }
+  .tabela th, .tabela td { padding: 12px 14px; font-size: 14px; }
+}
