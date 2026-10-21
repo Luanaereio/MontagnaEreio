@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Montagna">
+  <defs>
+    <linearGradient id="montagna-g" x1="30" y1="26" x2="60" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E6BFF"/>
+      <stop offset="1" stop-color="#17B890"/>
+    </linearGradient>
+  </defs>
+  <circle cx="47" cy="15" r="6" fill="#17B890"/>
+  <path d="M6 50 L24 17 L38 41 L32 50 Z" fill="#0F2742" stroke="#0F2742" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M28 50 L43 27 L59 50 Z" fill="url(#montagna-g)" stroke="url(#montagna-g)" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M24 17 L29 26 L24.5 23.5 L19 26 Z" fill="#FFFFFF" opacity="0.92"/>
+</svg>
