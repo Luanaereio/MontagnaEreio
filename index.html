@@ -21,8 +21,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <linearGradient id="mg" x1="30" y1="26" x2="60" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
-    <symbol id="marca" viewBox="0 0 64 64"><circle cx="47" cy="15" r="6" fill="#17B890"/><path d="M6 50 L24 17 L38 41 L32 50 Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 50 L43 27 L59 50 Z" fill="url(#mg)" stroke="url(#mg)" stroke-width="4" stroke-linejoin="round"/><path d="M24 17 L29 26 L24.5 23.5 L19 26 Z" fill="#FFFFFF" opacity="0.92"/></symbol>
+    <linearGradient id="mg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
+    <symbol id="marca" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="url(#mg)"/><path d="M16 44 L26 24 L32 34 L38 24 L48 44 Z" fill="#fff"/><circle cx="44" cy="18" r="3.5" fill="#fff" opacity="0.9"/></symbol>
+    <filter id="grao-f"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/></filter>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.4-4.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
@@ -31,11 +32,12 @@
     <symbol id="i-balanca" viewBox="0 0 24 24"><path d="M12 3v18M4 21h16M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-fala" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 10h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-pessoa" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-moeda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 9.5c0-1.1-1.1-2-2.5-2s-2.5.9-2.5 2 1.1 2 2.5 2 2.5.9 2.5 2-1.1 2-2.5 2-2.5-.9-2.5-2M12 6v1.5M12 16.5V18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="currentColor"/></symbol>
     <symbol id="i-pessoas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4a3.5 3.5 0 0 1 0 7M18.5 13a6 6 0 0 1 3 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-predio" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moeda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 9.5c0-1.1-1.1-2-2.5-2s-2.5.9-2.5 2 1.1 2 2.5 2 2.5.9 2.5 2-1.1 2-2.5 2-2.5-.9-2.5-2M12 6v1.5M12 16.5V18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
@@ -55,15 +57,16 @@
 </header>
 
 <main>
-  <section class="abertura">
+  <section class="abertura escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro abertura-dentro">
       <div>
         <span class="etiqueta">Planos de saúde e seguros</span>
-        <h1>Proteção para a sua saúde, sua família e <em>o que você construiu.</em></h1>
+        <h1>Proteção para a sua saúde, sua família e <span class="grad">o que você construiu.</span></h1>
         <p class="apoio">A Montagna compara as opções do mercado, explica cada detalhe em linguagem simples e cuida de tudo pelo WhatsApp. Você escolhe com calma e não paga nada pela consultoria.</p>
         <div class="acoes">
-          <a class="botao botao-azul botao-grande" href="planos-de-saude.html">Cotar plano de saúde <svg><use href="#i-seta"/></svg></a>
-          <a class="botao botao-claro botao-grande" href="seguros.html">Cotar seguro</a>
+          <a class="botao botao-verde botao-grande" href="planos-de-saude.html">Cotar plano de saúde <svg><use href="#i-seta"/></svg></a>
+          <a class="botao botao-vidro botao-grande" href="seguros.html">Cotar seguro</a>
         </div>
         <div class="provas">
           <span class="prova"><svg><use href="#i-check"/></svg>Atendimento humano pelo WhatsApp</span>
@@ -71,30 +74,112 @@
           <span class="prova"><svg><use href="#i-check"/></svg>Resposta em até 1 dia útil</span>
         </div>
       </div>
-      <div class="caminhos">
-        <a class="caminho saude sobe" href="planos-de-saude.html">
-          <span class="caminho-icone"><svg><use href="#i-coracao"/></svg></span>
-          <h3>Planos de saúde</h3>
-          <p>Individual, familiar ou empresarial. A gente encontra a rede, a cobertura e o preço que fazem sentido para você.</p>
-          <span class="ir">Ver planos de saúde <svg><use href="#i-seta"/></svg></span>
-        </a>
-        <a class="caminho seguros sobe" href="seguros.html">
-          <span class="caminho-icone"><svg><use href="#i-escudo"/></svg></span>
-          <h3>Seguros</h3>
-          <p>Vida, auto, residencial, viagem e empresarial. Proteção sob medida, com apoio na hora em que você mais precisa.</p>
-          <span class="ir">Ver seguros <svg><use href="#i-seta"/></svg></span>
-        </a>
+      <div class="cena" aria-hidden="true">
+        <span class="chao"></span>
+        <span class="esfera e1"></span><span class="esfera e2"></span><span class="esfera e3"></span>
+        <div class="fone"><div class="tela">
+          <div class="chat-topo"><svg class="logo-marca"><use href="#marca"/></svg><div><b>Montagna</b><small>online agora</small></div></div>
+          <div class="chat">
+            <div class="balao de">Oi! Queria cotar um plano de saúde pra minha família. Somos 3.</div>
+            <div class="balao para">Oi, Fernanda! Comparei 4 operadoras pra vocês. Olha as 3 melhores:</div>
+            <div class="balao cartao-cotacao"><b>Cotação comparada</b>
+              <div class="cotacao-linha melhor"><span>Opção 1 · rede ampla · apartamento</span><i>melhor</i></div>
+              <div class="cotacao-linha"><span>Opção 2 · com coparticipação</span></div>
+              <div class="cotacao-linha"><span>Opção 3 · regional · enfermaria</span></div>
+            </div>
+            <div class="balao de">A primeira! Como faço?</div>
+            <div class="balao para">Eu cuido de tudo. Me manda os documentos por aqui mesmo.</div>
+            <div class="digitando"><i></i><i></i><i></i></div>
+          </div>
+        </div></div>
+        <div class="flutuante f1"><span class="ico verde"><svg><use href="#i-relogio"/></svg></span><div><small>Cotação pronta em</small><b>1 dia útil</b></div></div>
+        <div class="flutuante f2"><span class="ico azul"><svg><use href="#i-balanca"/></svg></span><div><small>Comparadas lado a lado</small><b>4 operadoras</b></div></div>
+        <div class="flutuante f3"><span class="ico branco"><svg><use href="#i-check"/></svg></span><div><small>Portabilidade</small><b>Carência zero</b></div></div>
+        <span class="pilula">Consultoria sem custo</span>
       </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#E3ECFA"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#D2E0F6"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff" opacity="0.06"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff" opacity="0.08"/></svg>
   </section>
 
   <section class="compromissos" aria-label="Nossos compromissos">
     <div class="dentro compromissos-dentro">
-      <div class="compromisso"><b>1 dia útil</b><span>para você receber a cotação comparada</span></div>
-      <div class="compromisso"><b>R$ 0</b><span>pela consultoria: o valor é o mesmo da tabela</span></div>
-      <div class="compromisso"><b>100%</b><span>pelo WhatsApp, sem ligação e sem visita</span></div>
-      <div class="compromisso"><b>Gente</b><span>de verdade do outro lado, antes e depois de contratar</span></div>
+      <div class="compromisso"><b class="grad-escuro">1 dia útil</b><span>para você receber a cotação comparada</span></div>
+      <div class="compromisso"><b class="grad-escuro">R$ 0</b><span>pela consultoria: o valor é o mesmo da tabela</span></div>
+      <div class="compromisso"><b class="grad-escuro">100%</b><span>pelo WhatsApp, sem ligação e sem visita</span></div>
+      <div class="compromisso"><b class="grad-escuro">Gente</b><span>de verdade do outro lado, antes e depois de contratar</span></div>
+    </div>
+  </section>
+
+  <section class="secao" id="caminhos">
+    <div class="dentro">
+      <div class="cabeca sobe">
+        <span class="etiqueta">O que fazemos</span>
+        <h2>Dois caminhos, um jeito de cuidar.</h2>
+        <p>Escolha por onde começar. Nos dois, você manda os dados pelo WhatsApp e recebe as opções comparadas em até um dia útil.</p>
+      </div>
+      <div class="caminhos">
+        <a class="caminho saude sobe" href="planos-de-saude.html">
+          <span class="caminho-icone"><svg><use href="#i-coracao"/></svg></span>
+          <span class="esfera c1"></span><span class="esfera c2"></span>
+          <span class="rotulo">Planos de saúde</span>
+          <h3>Individual, familiar ou empresarial</h3>
+          <p>A gente encontra a rede, a cobertura e o preço que fazem sentido para você, e explica carência e coparticipação antes de você decidir.</p>
+          <span class="ir">Ver planos de saúde <svg><use href="#i-seta"/></svg></span>
+        </a>
+        <a class="caminho seguros sobe" href="seguros.html">
+          <span class="caminho-icone"><svg><use href="#i-escudo"/></svg></span>
+          <span class="esfera c1"></span><span class="esfera c2"></span>
+          <span class="rotulo">Seguros</span>
+          <h3>Vida, auto, residencial, viagem e empresa</h3>
+          <p>Proteção sob medida em várias seguradoras, com franquia e coberturas explicadas e apoio na hora em que você mais precisa.</p>
+          <span class="ir">Ver seguros <svg><use href="#i-seta"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao neve" id="comparacao">
+    <div class="dentro comparacao-wrap">
+      <div class="cabeca sobe">
+        <span class="etiqueta">Como chega a sua cotação</span>
+        <h2>Tudo lado a lado, por escrito, com a nossa recomendação.</h2>
+        <p>Em vez de PDFs soltos de cada operadora, você recebe uma comparação só, com cada linha explicada. É assim que a decisão fica fácil.</p>
+        <ul class="lista-pontos">
+          <li><i>1</i><span><b>Preço real</b> de cada opção para as suas idades e a sua cidade.</span></li>
+          <li><i>2</i><span><b>Rede, carência e coparticipação</b> traduzidas, sem letra miúda.</span></li>
+          <li><i>3</i><span><b>Uma recomendação clara</b>, e o porquê dela.</span></li>
+        </ul>
+      </div>
+      <div class="comparacao sobe" aria-label="Exemplo de cotação comparada">
+        <div class="comparacao-topo"><div><b>Cotação comparada</b><small>Família de 3 · Cotia e região</small></div><span class="pontos"><i></i><i></i><i></i></span></div>
+        <div class="comparacao-grade">
+          <div class="criterio"></div>
+          <div class="cabecalho">Operadora A<small>Regional</small></div>
+          <div class="cabecalho melhor"><span class="selo-rec">Recomendada</span>Operadora B<small>Rede ampla</small></div>
+          <div class="cabecalho">Operadora C<small>Nacional</small></div>
+          <div class="criterio">Mensalidade</div>
+          <div class="celula"><span class="barra"><i style="width:55%"></i></span></div>
+          <div class="celula melhor"><span class="barra"><i style="width:62%"></i></span></div>
+          <div class="celula"><span class="barra"><i style="width:88%"></i></span></div>
+          <div class="criterio">Rede perto de casa</div>
+          <div class="celula">Básica</div>
+          <div class="celula melhor">Ampla, com hospital de referência</div>
+          <div class="celula">Ampla</div>
+          <div class="criterio">Carência</div>
+          <div class="celula">180 dias</div>
+          <div class="celula melhor">Zero, por portabilidade</div>
+          <div class="celula">120 dias</div>
+          <div class="criterio">Coparticipação</div>
+          <div class="celula">Sim</div>
+          <div class="celula melhor">Não</div>
+          <div class="celula">Não</div>
+          <div class="criterio">Acomodação</div>
+          <div class="celula">Enfermaria</div>
+          <div class="celula melhor">Apartamento</div>
+          <div class="celula">Apartamento</div>
+        </div>
+        <div class="comparacao-pe"><span>Exemplo ilustrativo. A sua cotação sai com nomes, valores e condições reais.</span></div>
+      </div>
     </div>
   </section>
 
@@ -114,10 +199,11 @@
     </div>
   </section>
 
-  <section class="secao neve" id="para-quem">
+  <section class="secao escuro" id="para-quem">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Para quem é</span>
+        <span class="etiqueta">Para quem é</span>
         <h2>Cada fase da vida pede uma proteção diferente.</h2>
         <p>A gente atende do primeiro plano de saúde ao seguro da empresa. O que muda é a conversa, não o cuidado.</p>
       </div>
@@ -133,7 +219,7 @@
   <section class="secao" id="como-funciona">
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Como funciona</span>
+        <span class="etiqueta">Como funciona</span>
         <h2>Três passos, sem burocracia.</h2>
         <p>Tudo acontece pelo WhatsApp, no seu tempo.</p>
       </div>
@@ -160,13 +246,13 @@
     </div>
   </section>
 
-  <section class="secao" id="quem-somos">
+  <section class="secao escuro" id="quem-somos">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro sobre">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Quem somos</span>
-        <h2>Uma consultoria para você entender antes de assinar.</h2>
-        <p>A Montagna é uma consultoria de planos de saúde e seguros com atendimento digital. Nasceu de uma constatação simples: quase ninguém entende o que está contratando, e paga caro por isso, em dinheiro ou em dor de cabeça na hora de usar.</p>
-        <p>O nosso trabalho é comparar, traduzir e acompanhar. Comparar as opções do mercado com critério, traduzir carência, coparticipação e franquia para a sua realidade, e acompanhar você depois da assinatura, quando a maioria some.</p>
+        <span class="etiqueta">Quem somos</span>
+        <p class="declaracao">Quase ninguém entende o que está contratando. <span class="grad">A gente existe para mudar isso.</span></p>
+        <p style="margin-top:24px">A Montagna é uma consultoria de planos de saúde e seguros com atendimento digital. Nosso trabalho é comparar as opções do mercado com critério, traduzir carência, coparticipação e franquia para a sua realidade, e acompanhar você depois da assinatura, quando a maioria some.</p>
       </div>
       <div class="sobre-caixa sobe">
         <h3>O que você pode esperar</h3>
@@ -181,7 +267,7 @@
     </div>
   </section>
 
-  <section class="secao neve" id="duvidas">
+  <section class="secao" id="duvidas">
     <div class="dentro">
       <div class="cabeca centro sobe">
         <span class="etiqueta">Dúvidas frequentes</span>
@@ -197,18 +283,19 @@
     </div>
   </section>
 
-  <section class="chamada">
+  <section class="chamada escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro chamada-dentro">
       <div>
-        <h2>Quer uma cotação sem compromisso?</h2>
+        <h2>Quer uma cotação <span class="grad">sem compromisso?</span></h2>
         <p>Manda uma mensagem agora. Em até um dia útil você recebe as melhores opções, explicadas uma a uma.</p>
       </div>
       <div class="acoes">
         <a class="botao botao-verde botao-grande" href="#" data-whats data-mensagem="Olá! Vim pelo site da Montagna e quero uma cotação."><svg><use href="#i-chat"/></svg>Falar no WhatsApp</a>
-        <a class="botao botao-claro botao-grande" href="planos-de-saude.html">Ver planos de saúde</a>
+        <a class="botao botao-vidro botao-grande" href="planos-de-saude.html">Ver planos de saúde</a>
       </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z"/></svg>
   </section>
 </main>
 
@@ -216,7 +303,7 @@
   <div class="dentro">
     <div class="rodape-dentro">
       <div class="rodape-marca">
-        <a class="logo clara" href="index.html" aria-label="Montagna, início"><svg class="logo-marca" style="color:#fff"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
+        <a class="logo" href="index.html" aria-label="Montagna, início"><svg class="logo-marca"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
         <p>Consultoria em planos de saúde e seguros. Comparamos as opções do mercado e cuidamos de tudo pelo WhatsApp, sem custo para você.</p>
       </div>
       <div class="rodape-col">

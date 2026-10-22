@@ -15,6 +15,11 @@ destino, com formulario que abre o WhatsApp ja preenchido.
 Site estatico, sem build: `estilo.css` (folha unica), `script.js`, `img/` (logo em SVG e PNG, imagem de
 compartilhamento `og.png`), `favicon.svg`. Fontes Plus Jakarta Sans (titulos) e Inter (texto), do Google Fonts.
 
+Visual: secoes escuras (`.escuro`) com malha de cores e grao (filtro SVG `#grao-f` definido em cada pagina),
+celular desenhado em CSS com a conversa do WhatsApp na abertura da home, cartoes de vidro flutuando, "cotacao
+comparada" como tela de app (`.comparacao`), montanhas em SVG no pe das secoes escuras. Tudo em HTML e CSS, sem
+imagens de banco.
+
 ## WhatsApp
 
 O numero fica em um lugar so, no comeco de `script.js` (`WHATSAPP = '5511966648300'`). Todo link com `data-whats`
@@ -38,8 +43,8 @@ cole a tag do Google (gtag) no `<head>` das paginas e defina, antes do `script.j
 
 ## Logo
 
-Desenho em `img/logo-marca.svg` (duas montanhas formando um M e um sol): a maior em navy, a menor em degrade de
-azul para verde-agua. Versoes prontas em PNG: `img/logo.png` (horizontal, fundo transparente, para fundo claro),
+Desenho em `img/logo-marca.svg`: monograma com duas montanhas brancas (o M) e um sol dentro de um circulo em
+degrade de azul para verde-agua. Versoes prontas em PNG: `img/logo.png` (horizontal, fundo transparente, para fundo claro),
 `img/logo-branco.png` (para fundo escuro), `img/logo-quadrado.png` (avatar de redes sociais) e `img/og.png`
 (compartilhamento). Nas paginas o logo e desenhado inline (marca em SVG + nome em texto), entao escala sem perder
 qualidade.

@@ -21,8 +21,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <linearGradient id="mg" x1="30" y1="26" x2="60" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
-    <symbol id="marca" viewBox="0 0 64 64"><circle cx="47" cy="15" r="6" fill="#17B890"/><path d="M6 50 L24 17 L38 41 L32 50 Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 50 L43 27 L59 50 Z" fill="url(#mg)" stroke="url(#mg)" stroke-width="4" stroke-linejoin="round"/><path d="M24 17 L29 26 L24.5 23.5 L19 26 Z" fill="#FFFFFF" opacity="0.92"/></symbol>
+    <linearGradient id="mg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
+    <symbol id="marca" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="url(#mg)"/><path d="M16 44 L26 24 L32 34 L38 24 L48 44 Z" fill="#fff"/><circle cx="44" cy="18" r="3.5" fill="#fff" opacity="0.9"/></symbol>
+    <filter id="grao-f"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/></filter>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.4-4.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
@@ -34,8 +35,9 @@
     <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-balanca" viewBox="0 0 24 24"><path d="M12 3v18M4 21h16M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-fala" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 10h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="currentColor"/></symbol>
     <symbol id="i-mao" viewBox="0 0 24 24"><path d="M7 12V6.5a1.5 1.5 0 0 1 3 0V11M10 11V4.5a1.5 1.5 0 0 1 3 0V11M13 11V5.5a1.5 1.5 0 0 1 3 0V12M16 12V8.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-2.7L4.6 15a1.6 1.6 0 0 1 2.6-1.8L7 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
@@ -54,11 +56,12 @@
 </header>
 
 <main>
-  <section class="abertura campanha">
+  <section class="abertura campanha escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro abertura-dentro">
       <div>
         <span class="etiqueta">Seguros</span>
-        <h1>Seguro sob medida para <em>o que importa para você.</em></h1>
+        <h1>Seguro sob medida para <span class="grad">o que importa para você.</span></h1>
         <p class="apoio">Vida, auto, residencial, viagem e empresarial. Cotamos em várias seguradoras, explicamos franquia e coberturas sem juridiquês e cuidamos de tudo pelo WhatsApp.</p>
         <ul class="lista-check">
           <li><svg><use href="#i-check"/></svg><span>Uma cotação, várias seguradoras</span></li>
@@ -66,35 +69,85 @@
           <li><svg><use href="#i-check"/></svg><span>Apoio no sinistro, a hora em que o seguro precisa funcionar</span></li>
         </ul>
       </div>
-      <form class="form-cartao sobe" data-cotacao="seguros" novalidate>
-        <h2>Peça sua cotação</h2>
-        <p class="nota">Leva dois minutos. A resposta vem pelo WhatsApp, em até um dia útil.</p>
-        <div class="campos-2">
-          <div class="campo"><label for="g-nome">Seu nome</label><input id="g-nome" name="nome" data-rotulo="Nome" type="text" autocomplete="name" placeholder="Como quer ser chamado" required></div>
-          <div class="campo"><label for="g-tel">Seu WhatsApp</label><input id="g-tel" name="whatsapp" data-rotulo="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" data-mascara="telefone" placeholder="(11) 90000-0000" required></div>
-        </div>
-        <div class="campo">
-          <span class="campo-rotulo" style="font-size:13px;font-weight:700">Qual seguro?</span>
-          <div class="opcoes" role="radiogroup" aria-label="Qual seguro">
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Vida" required><span>Vida</span></label>
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Auto"><span>Auto</span></label>
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Residencial"><span>Residencial</span></label>
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Viagem"><span>Viagem</span></label>
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Empresarial"><span>Empresarial</span></label>
-            <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Outro"><span>Outro</span></label>
+      <div class="form-cena">
+        <span class="esfera e1" aria-hidden="true"></span><span class="esfera e2" aria-hidden="true"></span>
+        <div class="flutuante f1" aria-hidden="true"><span class="ico verde"><svg><use href="#i-escudo"/></svg></span><div><small>Franquia</small><b>Explicada antes</b></div></div>
+        <div class="flutuante f2" aria-hidden="true"><span class="ico azul"><svg><use href="#i-mao"/></svg></span><div><small>Aconteceu?</small><b>Apoio no sinistro</b></div></div>
+        <form class="form-cartao sobe" data-cotacao="seguros" novalidate>
+          <h2>Peça sua cotação</h2>
+          <p class="nota">Leva dois minutos. A resposta vem pelo WhatsApp, em até um dia útil.</p>
+          <div class="campos-2">
+            <div class="campo"><label for="g-nome">Seu nome</label><input id="g-nome" name="nome" data-rotulo="Nome" type="text" autocomplete="name" placeholder="Como quer ser chamado" required></div>
+            <div class="campo"><label for="g-tel">Seu WhatsApp</label><input id="g-tel" name="whatsapp" data-rotulo="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" data-mascara="telefone" placeholder="(11) 90000-0000" required></div>
           </div>
-        </div>
-        <div class="campo"><label for="g-detalhes">Conte um pouco</label><textarea id="g-detalhes" name="detalhes" data-rotulo="Detalhes" placeholder="Ex.: carro 2021, uso diário, fica na garagem. Ou: seguro de vida para casal de 35 anos."></textarea></div>
-        <div class="campo"><label for="g-cidade">Cidade</label><input id="g-cidade" name="cidade" data-rotulo="Cidade" type="text" autocomplete="address-level2" placeholder="Onde você mora"></div>
-        <button class="botao botao-verde botao-grande" type="submit"><svg><use href="#i-chat"/></svg>Receber cotação no WhatsApp</button>
-        <p class="form-pe">Seus dados vão só para o nosso WhatsApp. Nada de spam.</p>
-        <p class="form-ok" role="status">Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.</p>
-      </form>
+          <div class="campo">
+            <span class="campo-rotulo">Qual seguro?</span>
+            <div class="opcoes" role="radiogroup" aria-label="Qual seguro">
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Vida" required><span>Vida</span></label>
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Auto"><span>Auto</span></label>
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Residencial"><span>Residencial</span></label>
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Viagem"><span>Viagem</span></label>
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Empresarial"><span>Empresarial</span></label>
+              <label class="opcao"><input type="radio" name="tipo" data-rotulo="Seguro" value="Outro"><span>Outro</span></label>
+            </div>
+          </div>
+          <div class="campo"><label for="g-detalhes">Conte um pouco</label><textarea id="g-detalhes" name="detalhes" data-rotulo="Detalhes" placeholder="Ex.: carro 2021, uso diário, fica na garagem. Ou: seguro de vida para casal de 35 anos."></textarea></div>
+          <div class="campo"><label for="g-cidade">Cidade</label><input id="g-cidade" name="cidade" data-rotulo="Cidade" type="text" autocomplete="address-level2" placeholder="Onde você mora"></div>
+          <button class="botao botao-verde botao-grande" type="submit"><svg><use href="#i-chat"/></svg>Receber cotação no WhatsApp</button>
+          <p class="form-pe">Seus dados vão só para o nosso WhatsApp. Nada de spam.</p>
+          <p class="form-ok" role="status">Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.</p>
+        </form>
+      </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#E3ECFA"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#D2E0F6"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff" opacity="0.06"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff" opacity="0.08"/></svg>
   </section>
 
   <div class="faixa"><div class="dentro faixa-dentro"><b>Cotamos nas principais seguradoras</b><span>Vida</span><span>Auto</span><span>Residencial</span><span>Viagem</span><span>Empresarial</span></div></div>
+
+  <section class="secao neve" id="comparacao">
+    <div class="dentro comparacao-wrap">
+      <div class="cabeca sobe">
+        <span class="etiqueta">Como chega a sua cotação</span>
+        <h2>As seguradoras lado a lado, com a nossa recomendação.</h2>
+        <p>Preço, franquia e coberturas de cada seguradora numa comparação só, por escrito. Você vê o que muda entre uma e outra antes de assinar.</p>
+        <ul class="lista-pontos">
+          <li><i>1</i><span><b>Preço e parcelamento</b> de cada seguradora para o seu perfil.</span></li>
+          <li><i>2</i><span><b>Franquia e coberturas</b> traduzidas: o que entra, o que fica de fora, quanto fica com você.</span></li>
+          <li><i>3</i><span><b>A opção recomendada</b> e o porquê, para você decidir com segurança.</span></li>
+        </ul>
+      </div>
+      <div class="comparacao sobe" aria-label="Exemplo de cotação comparada">
+        <div class="comparacao-topo"><div><b>Cotação comparada</b><small>Seguro auto · hatch 2021 · garagem</small></div><span class="pontos"><i></i><i></i><i></i></span></div>
+        <div class="comparacao-grade">
+          <div class="criterio"></div>
+          <div class="cabecalho">Seguradora A<small>Básica</small></div>
+          <div class="cabecalho melhor"><span class="selo-rec">Recomendada</span>Seguradora B<small>Completa</small></div>
+          <div class="cabecalho">Seguradora C<small>Premium</small></div>
+          <div class="criterio">Preço anual</div>
+          <div class="celula"><span class="barra"><i style="width:50%"></i></span></div>
+          <div class="celula melhor"><span class="barra"><i style="width:58%"></i></span></div>
+          <div class="celula"><span class="barra"><i style="width:92%"></i></span></div>
+          <div class="criterio">Franquia</div>
+          <div class="celula">Alta</div>
+          <div class="celula melhor">Reduzida</div>
+          <div class="celula">Normal</div>
+          <div class="criterio">Carro reserva</div>
+          <div class="celula">Não</div>
+          <div class="celula melhor">15 dias</div>
+          <div class="celula">30 dias</div>
+          <div class="criterio">Danos a terceiros</div>
+          <div class="celula">Básico</div>
+          <div class="celula melhor">Ampliado</div>
+          <div class="celula">Ampliado</div>
+          <div class="criterio">Assistência 24 h</div>
+          <div class="celula">Guincho limitado</div>
+          <div class="celula melhor">Completa, sem limite de km</div>
+          <div class="celula">Completa</div>
+        </div>
+        <div class="comparacao-pe"><span>Exemplo ilustrativo. A sua cotação sai com nomes, valores e condições reais.</span></div>
+      </div>
+    </div>
+  </section>
 
   <section class="secao" id="tipos">
     <div class="dentro">
@@ -114,10 +167,11 @@
     </div>
   </section>
 
-  <section class="secao neve" id="por-que">
+  <section class="secao escuro" id="por-que">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Por que cotar com a gente</span>
+        <span class="etiqueta">Por que cotar com a gente</span>
         <h2>Seguro bom é o que funciona quando você precisa.</h2>
       </div>
       <div class="grade-3">
@@ -151,7 +205,7 @@
   <section class="secao neve" id="passo-a-passo">
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Da cotação à apólice</span>
+        <span class="etiqueta">Da cotação à apólice</span>
         <h2>Quatro passos, tudo pelo WhatsApp.</h2>
       </div>
       <div class="passos quatro">
@@ -181,7 +235,7 @@
   <section class="secao neve" id="glossario">
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Dicionário rápido</span>
+        <span class="etiqueta">Dicionário rápido</span>
         <h2>Seis palavras que aparecem em toda apólice.</h2>
       </div>
       <div class="glossario">
@@ -195,7 +249,8 @@
     </div>
   </section>
 
-  <section class="secao" id="depoimentos">
+  <section class="secao escuro" id="depoimentos">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro">
       <div class="cabeca centro sobe">
         <span class="etiqueta">Depoimentos</span>
@@ -210,7 +265,7 @@
     </div>
   </section>
 
-  <section class="secao neve" id="duvidas">
+  <section class="secao" id="duvidas">
     <div class="dentro">
       <div class="cabeca centro sobe">
         <span class="etiqueta">Dúvidas frequentes</span>
@@ -226,18 +281,19 @@
     </div>
   </section>
 
-  <section class="chamada">
+  <section class="chamada escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro chamada-dentro">
       <div>
-        <h2>Pronto para cotar?</h2>
+        <h2>Pronto para <span class="grad">cotar?</span></h2>
         <p>Conte o que você quer proteger e receba as opções comparadas, em até um dia útil.</p>
       </div>
       <div class="acoes">
         <a class="botao botao-verde botao-grande" href="#" data-whats data-conversao="seguros" data-mensagem="Olá! Vim pelo site da Montagna e quero uma cotação de seguro."><svg><use href="#i-chat"/></svg>Cotar pelo WhatsApp</a>
-        <a class="botao botao-claro botao-grande" href="planos-de-saude.html">Ver planos de saúde</a>
+        <a class="botao botao-vidro botao-grande" href="planos-de-saude.html">Ver planos de saúde</a>
       </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z"/></svg>
   </section>
 </main>
 
@@ -245,7 +301,7 @@
   <div class="dentro">
     <div class="rodape-dentro">
       <div class="rodape-marca">
-        <a class="logo clara" href="index.html" aria-label="Montagna, início"><svg class="logo-marca" style="color:#fff"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
+        <a class="logo" href="index.html" aria-label="Montagna, início"><svg class="logo-marca"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
         <p>Consultoria em planos de saúde e seguros. Comparamos as opções do mercado e cuidamos de tudo pelo WhatsApp, sem custo para você.</p>
       </div>
       <div class="rodape-col">

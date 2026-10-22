@@ -21,8 +21,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <linearGradient id="mg" x1="30" y1="26" x2="60" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
-    <symbol id="marca" viewBox="0 0 64 64"><circle cx="47" cy="15" r="6" fill="#17B890"/><path d="M6 50 L24 17 L38 41 L32 50 Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 50 L43 27 L59 50 Z" fill="url(#mg)" stroke="url(#mg)" stroke-width="4" stroke-linejoin="round"/><path d="M24 17 L29 26 L24.5 23.5 L19 26 Z" fill="#FFFFFF" opacity="0.92"/></symbol>
+    <linearGradient id="mg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E6BFF"/><stop offset="1" stop-color="#17B890"/></linearGradient>
+    <symbol id="marca" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="url(#mg)"/><path d="M16 44 L26 24 L32 34 L38 24 L48 44 Z" fill="#fff"/><circle cx="44" cy="18" r="3.5" fill="#fff" opacity="0.9"/></symbol>
+    <filter id="grao-f"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/></filter>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.4-4.3A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
@@ -34,6 +35,7 @@
     <symbol id="i-moeda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 9.5c0-1.1-1.1-2-2.5-2s-2.5.9-2.5 2 1.1 2 2.5 2 2.5.9 2.5 2-1.1 2-2.5 2-2.5-.9-2.5-2M12 6v1.5M12 16.5V18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-documento" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-balanca" viewBox="0 0 24 24"><path d="M12 3v18M4 21h16M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="currentColor"/></symbol>
   </defs>
 </svg>
@@ -53,11 +55,12 @@
 </header>
 
 <main>
-  <section class="abertura campanha">
+  <section class="abertura campanha escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro abertura-dentro">
       <div>
-        <span class="etiqueta verde">Planos de saúde</span>
-        <h1>O plano de saúde certo para você, <em>pelo melhor preço.</em></h1>
+        <span class="etiqueta">Planos de saúde</span>
+        <h1>O plano de saúde certo para você, <span class="grad">pelo melhor preço.</span></h1>
         <p class="apoio">Individual, familiar ou para a sua empresa. Comparamos as principais operadoras e mostramos preço, rede e carência lado a lado. Sem custo pela consultoria.</p>
         <ul class="lista-check">
           <li><svg><use href="#i-check"/></svg><span>Cotação em até um dia útil, pelo WhatsApp</span></li>
@@ -65,38 +68,88 @@
           <li><svg><use href="#i-check"/></svg><span>Acompanhamento depois da contratação: carteirinha, rede, dúvidas</span></li>
         </ul>
       </div>
-      <form class="form-cartao sobe" data-cotacao="saude" novalidate>
-        <h2>Peça sua cotação</h2>
-        <p class="nota">Leva dois minutos. A resposta vem pelo WhatsApp, em até um dia útil.</p>
-        <div class="campos-2">
-          <div class="campo"><label for="s-nome">Seu nome</label><input id="s-nome" name="nome" data-rotulo="Nome" type="text" autocomplete="name" placeholder="Como quer ser chamado" required></div>
-          <div class="campo"><label for="s-tel">Seu WhatsApp</label><input id="s-tel" name="whatsapp" data-rotulo="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" data-mascara="telefone" placeholder="(11) 90000-0000" required></div>
-        </div>
-        <div class="campo">
-          <span class="campo-rotulo" style="font-size:13px;font-weight:700">Para quem é o plano?</span>
-          <div class="opcoes" role="radiogroup" aria-label="Para quem é o plano">
-            <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Para mim" required><span>Para mim</span></label>
-            <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Minha família"><span>Minha família</span></label>
-            <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Minha empresa"><span>Minha empresa</span></label>
+      <div class="form-cena">
+        <span class="esfera e1" aria-hidden="true"></span><span class="esfera e2" aria-hidden="true"></span>
+        <div class="flutuante f1" aria-hidden="true"><span class="ico verde"><svg><use href="#i-pino"/></svg></span><div><small>Rede</small><b>Perto de você</b></div></div>
+        <div class="flutuante f2" aria-hidden="true"><span class="ico azul"><svg><use href="#i-relogio"/></svg></span><div><small>Resposta em</small><b>1 dia útil</b></div></div>
+        <form class="form-cartao sobe" data-cotacao="saude" novalidate>
+          <h2>Peça sua cotação</h2>
+          <p class="nota">Leva dois minutos. A resposta vem pelo WhatsApp, em até um dia útil.</p>
+          <div class="campos-2">
+            <div class="campo"><label for="s-nome">Seu nome</label><input id="s-nome" name="nome" data-rotulo="Nome" type="text" autocomplete="name" placeholder="Como quer ser chamado" required></div>
+            <div class="campo"><label for="s-tel">Seu WhatsApp</label><input id="s-tel" name="whatsapp" data-rotulo="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" data-mascara="telefone" placeholder="(11) 90000-0000" required></div>
           </div>
-        </div>
-        <div class="campos-2">
-          <div class="campo"><label for="s-qtd">Quantas pessoas?</label><select id="s-qtd" name="pessoas" data-rotulo="Pessoas"><option value="1 pessoa">1 pessoa</option><option value="2 pessoas">2 pessoas</option><option value="3 pessoas">3 pessoas</option><option value="4 pessoas">4 pessoas</option><option value="5 ou mais">5 ou mais</option></select></div>
-          <div class="campo"><label for="s-idades">Idades</label><input id="s-idades" name="idades" data-rotulo="Idades" type="text" inputmode="numeric" placeholder="Ex.: 34, 32 e 5"></div>
-        </div>
-        <div class="campos-2">
-          <div class="campo"><label for="s-cidade">Cidade</label><input id="s-cidade" name="cidade" data-rotulo="Cidade" type="text" autocomplete="address-level2" placeholder="Onde você mora"></div>
-          <div class="campo"><label for="s-tem">Já tem plano hoje?</label><select id="s-tem" name="tem_plano" data-rotulo="Já tem plano"><option value="Não">Não</option><option value="Sim, quero trocar">Sim, quero trocar</option></select></div>
-        </div>
-        <button class="botao botao-verde botao-grande" type="submit"><svg><use href="#i-chat"/></svg>Receber cotação no WhatsApp</button>
-        <p class="form-pe">Seus dados vão só para o nosso WhatsApp. Nada de spam.</p>
-        <p class="form-ok" role="status">Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.</p>
-      </form>
+          <div class="campo">
+            <span class="campo-rotulo">Para quem é o plano?</span>
+            <div class="opcoes" role="radiogroup" aria-label="Para quem é o plano">
+              <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Para mim" required><span>Para mim</span></label>
+              <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Minha família"><span>Minha família</span></label>
+              <label class="opcao"><input type="radio" name="para" data-rotulo="Para quem" value="Minha empresa"><span>Minha empresa</span></label>
+            </div>
+          </div>
+          <div class="campos-2">
+            <div class="campo"><label for="s-qtd">Quantas pessoas?</label><select id="s-qtd" name="pessoas" data-rotulo="Pessoas"><option value="1 pessoa">1 pessoa</option><option value="2 pessoas">2 pessoas</option><option value="3 pessoas">3 pessoas</option><option value="4 pessoas">4 pessoas</option><option value="5 ou mais">5 ou mais</option></select></div>
+            <div class="campo"><label for="s-idades">Idades</label><input id="s-idades" name="idades" data-rotulo="Idades" type="text" inputmode="numeric" placeholder="Ex.: 34, 32 e 5"></div>
+          </div>
+          <div class="campos-2">
+            <div class="campo"><label for="s-cidade">Cidade</label><input id="s-cidade" name="cidade" data-rotulo="Cidade" type="text" autocomplete="address-level2" placeholder="Onde você mora"></div>
+            <div class="campo"><label for="s-tem">Já tem plano hoje?</label><select id="s-tem" name="tem_plano" data-rotulo="Já tem plano"><option value="Não">Não</option><option value="Sim, quero trocar">Sim, quero trocar</option></select></div>
+          </div>
+          <button class="botao botao-verde botao-grande" type="submit"><svg><use href="#i-chat"/></svg>Receber cotação no WhatsApp</button>
+          <p class="form-pe">Seus dados vão só para o nosso WhatsApp. Nada de spam.</p>
+          <p class="form-ok" role="status">Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.</p>
+        </form>
+      </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#E3ECFA"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#D2E0F6"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff" opacity="0.06"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff" opacity="0.08"/></svg>
   </section>
 
   <div class="faixa"><div class="dentro faixa-dentro"><b>Comparamos as principais operadoras</b><span>Nacionais e regionais</span><span>Com e sem coparticipação</span><span>Rede perto de você</span></div></div>
+
+  <section class="secao neve" id="comparacao">
+    <div class="dentro comparacao-wrap">
+      <div class="cabeca sobe">
+        <span class="etiqueta">Como chega a sua cotação</span>
+        <h2>As operadoras lado a lado, com a nossa recomendação.</h2>
+        <p>Você não recebe três PDFs e um "qualquer dúvida, me chama". Recebe uma comparação só, por escrito, com cada linha explicada.</p>
+        <ul class="lista-pontos">
+          <li><i>1</i><span><b>Preço exato</b> para as suas idades e a sua cidade, com e sem coparticipação.</span></li>
+          <li><i>2</i><span><b>Rede e carência</b> de cada operadora, e quando a portabilidade zera a espera.</span></li>
+          <li><i>3</i><span><b>A opção recomendada</b> e o porquê, para você decidir com segurança.</span></li>
+        </ul>
+      </div>
+      <div class="comparacao sobe" aria-label="Exemplo de cotação comparada">
+        <div class="comparacao-topo"><div><b>Cotação comparada</b><small>Casal, 34 e 32 anos · apartamento</small></div><span class="pontos"><i></i><i></i><i></i></span></div>
+        <div class="comparacao-grade">
+          <div class="criterio"></div>
+          <div class="cabecalho">Operadora A<small>Regional</small></div>
+          <div class="cabecalho melhor"><span class="selo-rec">Recomendada</span>Operadora B<small>Rede ampla</small></div>
+          <div class="cabecalho">Operadora C<small>Nacional</small></div>
+          <div class="criterio">Mensalidade</div>
+          <div class="celula"><span class="barra"><i style="width:52%"></i></span></div>
+          <div class="celula melhor"><span class="barra"><i style="width:60%"></i></span></div>
+          <div class="celula"><span class="barra"><i style="width:90%"></i></span></div>
+          <div class="criterio">Hospitais perto</div>
+          <div class="celula">2</div>
+          <div class="celula melhor">5, incluindo o de referência</div>
+          <div class="celula">4</div>
+          <div class="criterio">Carência</div>
+          <div class="celula">180 dias</div>
+          <div class="celula melhor">Zero, por portabilidade</div>
+          <div class="celula">120 dias</div>
+          <div class="criterio">Coparticipação</div>
+          <div class="celula">Sim</div>
+          <div class="celula melhor">Não</div>
+          <div class="celula">Não</div>
+          <div class="criterio">Reembolso</div>
+          <div class="celula">Não tem</div>
+          <div class="celula melhor">Sim, consultas e exames</div>
+          <div class="celula">Sim</div>
+        </div>
+        <div class="comparacao-pe"><span>Exemplo ilustrativo. A sua cotação sai com nomes, valores e condições reais.</span></div>
+      </div>
+    </div>
+  </section>
 
   <section class="secao" id="tipos">
     <div class="dentro">
@@ -113,10 +166,11 @@
     </div>
   </section>
 
-  <section class="secao neve" id="avaliamos">
+  <section class="secao escuro" id="avaliamos">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro avaliamos">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">O que avaliamos para você</span>
+        <span class="etiqueta">O que avaliamos para você</span>
         <h2>Cinco pontos que mudam tudo na hora de escolher.</h2>
         <p>É aqui que a maioria erra sozinha: escolhe pelo preço e descobre depois que o hospital de confiança não está na rede ou que a carência não acabou. A gente olha tudo isso antes.</p>
       </div>
@@ -153,7 +207,7 @@
   <section class="secao neve" id="passo-a-passo">
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Da cotação à carteirinha</span>
+        <span class="etiqueta">Da cotação à carteirinha</span>
         <h2>Quatro passos, tudo pelo WhatsApp.</h2>
       </div>
       <div class="passos quatro">
@@ -183,7 +237,7 @@
   <section class="secao neve" id="glossario">
     <div class="dentro">
       <div class="cabeca sobe">
-        <span class="etiqueta verde">Dicionário rápido</span>
+        <span class="etiqueta">Dicionário rápido</span>
         <h2>Seis palavras que aparecem em todo contrato.</h2>
       </div>
       <div class="glossario">
@@ -197,7 +251,8 @@
     </div>
   </section>
 
-  <section class="secao" id="depoimentos">
+  <section class="secao escuro" id="depoimentos">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro">
       <div class="cabeca centro sobe">
         <span class="etiqueta">Depoimentos</span>
@@ -212,7 +267,7 @@
     </div>
   </section>
 
-  <section class="secao neve" id="duvidas">
+  <section class="secao" id="duvidas">
     <div class="dentro">
       <div class="cabeca centro sobe">
         <span class="etiqueta">Dúvidas frequentes</span>
@@ -228,18 +283,19 @@
     </div>
   </section>
 
-  <section class="chamada">
+  <section class="chamada escuro">
+    <svg class="grao" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grao-f)"/></svg>
     <div class="dentro chamada-dentro">
       <div>
-        <h2>Pronto para comparar?</h2>
+        <h2>Pronto para <span class="grad">comparar?</span></h2>
         <p>Mande as idades e a sua cidade e receba as opções de plano de saúde explicadas uma a uma, em até um dia útil.</p>
       </div>
       <div class="acoes">
         <a class="botao botao-verde botao-grande" href="#" data-whats data-conversao="saude" data-mensagem="Olá! Vim pelo site da Montagna e quero uma cotação de plano de saúde."><svg><use href="#i-chat"/></svg>Cotar pelo WhatsApp</a>
-        <a class="botao botao-claro botao-grande" href="seguros.html">Ver seguros</a>
+        <a class="botao botao-vidro botao-grande" href="seguros.html">Ver seguros</a>
       </div>
     </div>
-    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z" fill="#fff"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z" fill="#fff"/></svg>
+    <svg class="montanhas" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M0 240V170L180 90l150 70 190-100 180 90 180-110 180 100 180-60 200 80v80z"/><path d="M0 240v-40l200-60 200 50 200-70 200 70 200-80 200 70 240-50v110z"/></svg>
   </section>
 </main>
 
@@ -247,7 +303,7 @@
   <div class="dentro">
     <div class="rodape-dentro">
       <div class="rodape-marca">
-        <a class="logo clara" href="index.html" aria-label="Montagna, início"><svg class="logo-marca" style="color:#fff"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
+        <a class="logo" href="index.html" aria-label="Montagna, início"><svg class="logo-marca"><use href="#marca"/></svg><span class="logo-nome">montagna<small>planos de saúde e seguros</small></span></a>
         <p>Consultoria em planos de saúde e seguros. Comparamos as opções do mercado e cuidamos de tudo pelo WhatsApp, sem custo para você.</p>
       </div>
       <div class="rodape-col">
